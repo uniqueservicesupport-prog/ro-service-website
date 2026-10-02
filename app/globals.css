@@ -1,0 +1,8 @@
+@import "tailwindcss";
+
+@theme {
+  --font-poppins: var(--font-poppins);
+  --font-inter: var(--font-inter);
+  --color-primary: #1E40AF;
+  --color-accent: #F97316;
+}
