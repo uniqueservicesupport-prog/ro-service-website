@@ -2,13 +2,12 @@ import Footer from '../components/Footer'
 
 export const metadata = {
   title: 'A.O. Smith RO Service Bangalore | Water Purifier Repair',
-  description: 'Expert A.O. Smith RO service in Bangalore. Repair A.O. Smith Z8, Z9, ProPlanet. Same-day doorstep service. Call 08050291180.',
+  description: 'Expert A.O. Smith RO service in Bangalore. Repair A.O. Smith water purifiers. Same-day doorstep service. Call 08050291180.',
 }
 
 export default function AOSmithService() {
   return (
     <main id="top">
-      {/* SECTION 1: Banner + Book A.O. Smith RO Repair Service */}
       <section id="book-section" className="bg-gradient-to-b from-green-50 to-white pt-10 pb-12 md:pt-16 md:pb-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           
@@ -48,13 +47,14 @@ export default function AOSmithService() {
 
             <details className="group">
               <summary className="list-none cursor-pointer text-center">
-                <span className="inline-block bg-[#00A651] hover:bg-[#008f45] text-white font-poppins font-semibold px-10 py-3 rounded-full transition duration-300 shadow-lg shadow-green-500/30 group-open:hidden">
+                <span className="inline-block bg-[#00A651] hover:bg-[#008f45] text-white font-poppins font-semibold px-10 py-3 rounded-full transition duration-300 shadow-lg shadow-[#00A651]/30 group-open:hidden">
                   Book Now
                 </span>
               </summary>
 
               <form id="aosmith-form" action="https://api.web3forms.com/submit" method="POST" className="space-y-4 mt-6">
                 <input type="hidden" name="access_key" value="1d5d47df-4a9a-4f20-ba78-7aa07022894e" />
+                <input type="hidden" name="redirect" value="https://roservicecentre24x7.in/thank-you" />
                 <input type="hidden" name="subject" value="New A.O. Smith Service Request" />
                 <input type="hidden" name="from_name" value="RO Service Center Website" />
 
@@ -97,8 +97,7 @@ export default function AOSmithService() {
         </div>
       </section>
 
-      {/* SECTION 2: Trust Stats */}
-      <section className="bg-gradient-to-br from-[#00A651] to-[#008f45] py-8 md:py-10">
+      <section className="bg-gradient-to-br from-[#00A651] to-[#006E36] py-8 md:py-10">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
             {[
@@ -109,14 +108,13 @@ export default function AOSmithService() {
             ].map((stat, i) => (
               <div key={i} className="bg-white/10 backdrop-blur-sm rounded-2xl p-5 text-center border border-white/20">
                 <p className="font-poppins text-2xl md:text-3xl font-bold text-white mb-1">{stat.value}</p>
-                <p className="text-green-50 text-xs md:text-sm font-inter uppercase tracking-wide">{stat.label}</p>
+                <p className="text-green-100 text-xs md:text-sm font-inter uppercase tracking-wide">{stat.label}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* SECTION 3: A.O. Smith RO Repair Service Paragraph */}
       <section className="py-12 md:py-16 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="font-inter text-xl md:text-2xl font-bold text-gray-900 text-center mb-6">
@@ -129,7 +127,6 @@ export default function AOSmithService() {
         </div>
       </section>
 
-      {/* SECTION 4: Our A.O. Smith Services - ID added */}
       <section id="services" className="py-12 md:py-16 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="font-inter text-xl md:text-2xl font-bold text-gray-900 text-center mb-10">
@@ -159,7 +156,6 @@ export default function AOSmithService() {
         </div>
       </section>
 
-      {/* SECTION 5: 4 Steps */}
       <section className="py-12 md:py-16 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="font-inter text-xl md:text-2xl font-bold text-gray-900 text-center mb-12">4 Steps to Repair A.O. Smith RO Service</h2>
@@ -179,7 +175,6 @@ export default function AOSmithService() {
         </div>
       </section>
 
-      {/* SECTION 6: Testimonials */}
       <section className="py-12 md:py-16 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
@@ -196,7 +191,7 @@ export default function AOSmithService() {
                 <div className="flex items-center justify-between mb-3">
                   <div className="text-yellow-500 text-lg">★★★★★</div>
                   <div className="flex items-center gap-1 text-xs text-gray-500 font-medium bg-white px-2 py-1 rounded-full border border-gray-100">
-                    <span className="text-green-500 font-bold">G</span> Verified
+                    <span className="text-blue-500 font-bold">G</span> Verified
                   </div>
                 </div>
                 <p className="text-gray-700 text-sm md:text-base leading-relaxed mb-4" style={{ fontFamily: 'Arial, Helvetica, sans-serif', textAlign: 'justify' }}>"{review.text}"</p>
@@ -213,7 +208,6 @@ export default function AOSmithService() {
         </div>
       </section>
 
-      {/* SECTION 7: FAQ */}
       <section className="py-12 md:py-16 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
@@ -226,7 +220,7 @@ export default function AOSmithService() {
               { q: 'Do you provide a warranty on A.O. Smith RO repairs?', a: 'Yes, we provide a 90-day warranty on all A.O. Smith RO repairs and replaced parts. We only use genuine compatible spare parts.' },
               { q: 'How do I make the payment for A.O. Smith RO service?', a: 'You can pay via Cash, UPI (GPay, PhonePe, Paytm), or Card after the A.O. Smith RO service is completed. No advance payment required.' },
               { q: 'Which areas in Bangalore do you cover for A.O. Smith RO service?', a: 'We cover all major areas in Bangalore including Whitefield, Koramangala, HSR Layout, Indiranagar, Jayanagar, Electronic City, and more.' },
-              { q: 'Do you service old A.O. Smith models?', a: 'Yes, we service all A.O. Smith models — old and new, including discontinued ones like A.O. Smith Z8, Z9, and ProPlanet.' },
+              { q: 'Do you service old A.O. Smith models?', a: 'Yes, we service all A.O. Smith models — old and new, including discontinued ones.' },
             ].map((faq, i) => (
               <div key={i} className="bg-white border border-gray-200 rounded-lg p-5">
                 <h3 className="font-inter font-semibold text-gray-900 text-sm md:text-base mb-2">{faq.q}</h3>
@@ -237,7 +231,6 @@ export default function AOSmithService() {
         </div>
       </section>
 
-      {/* SECTION 8: SEO Keywords */}
       <section className="py-12 md:py-16 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-6">
@@ -245,7 +238,7 @@ export default function AOSmithService() {
             <p className="text-gray-600 text-sm md:text-base" style={{ fontFamily: 'Arial, Helvetica, sans-serif' }}>We service all A.O. Smith RO water purifier models in Bangalore</p>
           </div>
           <p className="text-gray-700 text-sm md:text-base leading-relaxed" style={{ fontFamily: 'Arial, Helvetica, sans-serif', textAlign: 'justify' }}>
-            {['A.O. Smith RO Service Bangalore', 'A.O. Smith Water Purifier Repair', 'A.O. Smith Service Center Near Me', 'A.O. Smith Z8 Repair', 'A.O. Smith Z9 Service', 'A.O. Smith ProPlanet Repair', 'A.O. Smith Filter Change', 'A.O. Smith Water Purifier Service', 'A.O. Smith RO Installation Bangalore', 'A.O. Smith RO AMC Plans', 'A.O. Smith RO Motor Repair', 'A.O. Smith RO Leakage Fix', 'A.O. Smith Water Purifier Service Center', 'A.O. Smith RO Service Cost', 'A.O. Smith RO Repair Near Me', 'A.O. Smith RO Technician Bangalore', 'A.O. Smith RO Service Whitefield', 'A.O. Smith RO Service Koramangala', 'A.O. Smith RO Service HSR Layout', 'A.O. Smith RO Service Indiranagar', 'A.O. Smith RO Service Jayanagar', 'A.O. Smith RO Service Electronic City', 'A.O. Smith Water Purifier Service Bangalore', 'A.O. Smith RO Service Same Day', 'A.O. Smith RO Service 24x7', 'A.O. Smith RO Deep Cleaning', 'A.O. Smith RO UV Lamp Replacement', 'A.O. Smith RO Membrane Change', 'A.O. Smith RO Service Doorstep', 'A.O. Smith RO Filter Price Bangalore'].join(' • ')}
+            {['A.O. Smith RO Service Bangalore', 'A.O. Smith Water Purifier Repair', 'A.O. Smith Service Center Near Me', 'A.O. Smith RO Repair', 'A.O. Smith Filter Change', 'A.O. Smith RO Installation Bangalore', 'A.O. Smith RO AMC Plans', 'A.O. Smith RO Motor Repair', 'A.O. Smith RO Leakage Fix', 'A.O. Smith Water Purifier Service Center', 'A.O. Smith RO Service Cost', 'A.O. Smith RO Repair Near Me', 'A.O. Smith RO Technician Bangalore', 'A.O. Smith RO Service Whitefield', 'A.O. Smith RO Service Koramangala', 'A.O. Smith RO Service HSR Layout', 'A.O. Smith RO Service Indiranagar', 'A.O. Smith RO Service Jayanagar', 'A.O. Smith RO Service Electronic City', 'A.O. Smith Water Purifier Service', 'A.O. Smith RO Service Same Day', 'A.O. Smith RO Service 24x7', 'A.O. Smith RO Deep Cleaning', 'A.O. Smith RO UV Lamp Replacement', 'A.O. Smith RO Membrane Change', 'A.O. Smith RO Service Doorstep', 'A.O. Smith RO Filter Price Bangalore'].join(' • ')}
           </p>
         </div>
       </section>
