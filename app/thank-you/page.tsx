@@ -1,31 +1,34 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import { useSearchParams } from 'next/navigation'
 import Link from 'next/link'
 import Script from 'next/script'
 
 export default function ThankYou() {
+  const searchParams = useSearchParams()
   const [backUrl, setBackUrl] = useState('/')
+  const [backLabel, setBackLabel] = useState('Back to Home')
 
   useEffect(() => {
-    // Get the previous page URL (referrer)
-    const referrer = document.referrer
+    const from = searchParams.get('from')
     
-    if (referrer) {
-      // Extract path from URL (e.g., "/kent-service")
-      try {
-        const url = new URL(referrer)
-        const path = url.pathname
-        
-        // Check if it's a brand page
-        if (path && path !== '/' && path !== '/thank-you') {
-          setBackUrl(path)
-        }
-      } catch (e) {
-        // Ignore errors, use default
-      }
+    const brandMap: { [key: string]: string } = {
+      'kent': '/kent-service',
+      'havells': '/havells-service',
+      'pureit': '/pureit-service',
+      'aquaguard': '/aquaguard-service',
+      'livpure': '/livpure-service',
+      'lg': '/lg-service',
+      'vguard': '/vguard-service',
+      'aosmith': '/aosmith-service',
     }
-  }, [])
+
+    if (from && brandMap[from]) {
+      setBackUrl(brandMap[from])
+      setBackLabel(`Back to ${from.charAt(0).toUpperCase() + from.slice(1)}`)
+    }
+  }, [searchParams])
 
   return (
     <>
@@ -54,7 +57,6 @@ export default function ThankYou() {
             </svg>
           </div>
 
-          {/* Heading */}
           <h1 className="font-poppins text-3xl md:text-4xl font-bold text-gray-900 mb-4">
             Booking Successful!
           </h1>
@@ -62,7 +64,6 @@ export default function ThankYou() {
             Thank you for choosing our RO service. Our team will contact you shortly on the number you provided.
           </p>
 
-          {/* Info Box */}
           <div className="bg-blue-50 rounded-2xl p-6 mb-8 text-left">
             <h3 className="font-poppins font-bold text-gray-900 mb-3">What happens next?</h3>
             <ul className="space-y-3 text-sm font-inter text-gray-700">
@@ -81,13 +82,12 @@ export default function ThankYou() {
             </ul>
           </div>
 
-          {/* CTAs */}
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <a href="tel:08050291180" className="bg-primary hover:bg-blue-800 text-white font-poppins font-semibold px-8 py-4 rounded-lg transition">
               📞 Call Now
             </a>
             <Link href={backUrl} className="border-2 border-primary text-primary hover:bg-primary hover:text-white font-poppins font-semibold px-8 py-4 rounded-lg transition">
-              Back to Home
+              ← {backLabel}
             </Link>
           </div>
 

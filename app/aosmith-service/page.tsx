@@ -54,7 +54,7 @@ export default function AOSmithService() {
 
               <form id="aosmith-form" action="https://api.web3forms.com/submit" method="POST" className="space-y-4 mt-6">
                 <input type="hidden" name="access_key" value="1d5d47df-4a9a-4f20-ba78-7aa07022894e" />
-                <input type="hidden" name="redirect" value="https://roservicecentre24x7.in/thank-you" />
+                <input type="hidden" name="redirect" value="https://roservicecentre24x7.in/thank-you?from=aosmith" />
                 <input type="hidden" name="subject" value="New A.O. Smith Service Request" />
                 <input type="hidden" name="from_name" value="RO Service Center Website" />
 
