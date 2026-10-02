@@ -8,7 +8,6 @@ export const metadata = {
 export default function PureitService() {
   return (
     <main id="top">
-      {/* SECTION 1: Banner + Book Pureit RO Repair Service */}
       <section id="book-section" className="bg-gradient-to-b from-blue-50 to-white pt-10 pb-12 md:pt-16 md:pb-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           
@@ -55,6 +54,7 @@ export default function PureitService() {
 
               <form id="pureit-form" action="https://api.web3forms.com/submit" method="POST" className="space-y-4 mt-6">
                 <input type="hidden" name="access_key" value="1d5d47df-4a9a-4f20-ba78-7aa07022894e" />
+                <input type="hidden" name="redirect" value="https://roservicecentre24x7.in/thank-you" />
                 <input type="hidden" name="subject" value="New Pureit Service Request" />
                 <input type="hidden" name="from_name" value="RO Service Center Website" />
 
@@ -97,7 +97,6 @@ export default function PureitService() {
         </div>
       </section>
 
-      {/* SECTION 2: Trust Stats - Pureit Deep Blue */}
       <section className="bg-gradient-to-br from-[#1E3A8A] to-[#0F1F4D] py-8 md:py-10">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
@@ -116,7 +115,6 @@ export default function PureitService() {
         </div>
       </section>
 
-      {/* SECTION 3: Pureit RO Repair Service Paragraph */}
       <section className="py-12 md:py-16 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="font-inter text-xl md:text-2xl font-bold text-gray-900 text-center mb-6">
@@ -129,7 +127,6 @@ export default function PureitService() {
         </div>
       </section>
 
-      {/* SECTION 4: Our Pureit Services */}
       <section id="services" className="py-12 md:py-16 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="font-inter text-xl md:text-2xl font-bold text-gray-900 text-center mb-10">
@@ -159,7 +156,6 @@ export default function PureitService() {
         </div>
       </section>
 
-      {/* SECTION 5: 4 Steps */}
       <section className="py-12 md:py-16 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="font-inter text-xl md:text-2xl font-bold text-gray-900 text-center mb-12">4 Steps to Repair Pureit RO Service</h2>
@@ -179,7 +175,6 @@ export default function PureitService() {
         </div>
       </section>
 
-      {/* SECTION 6: Testimonials */}
       <section className="py-12 md:py-16 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
@@ -213,7 +208,6 @@ export default function PureitService() {
         </div>
       </section>
 
-      {/* SECTION 7: FAQ */}
       <section className="py-12 md:py-16 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
@@ -237,7 +231,6 @@ export default function PureitService() {
         </div>
       </section>
 
-      {/* SECTION 8: SEO Keywords */}
       <section className="py-12 md:py-16 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-6">
