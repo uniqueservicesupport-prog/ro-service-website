@@ -1,7 +1,32 @@
+'use client'
+
+import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import Script from 'next/script'
 
 export default function ThankYou() {
+  const [backUrl, setBackUrl] = useState('/')
+
+  useEffect(() => {
+    // Get the previous page URL (referrer)
+    const referrer = document.referrer
+    
+    if (referrer) {
+      // Extract path from URL (e.g., "/kent-service")
+      try {
+        const url = new URL(referrer)
+        const path = url.pathname
+        
+        // Check if it's a brand page
+        if (path && path !== '/' && path !== '/thank-you') {
+          setBackUrl(path)
+        }
+      } catch (e) {
+        // Ignore errors, use default
+      }
+    }
+  }, [])
+
   return (
     <>
       {/* Google Ads Conversion Tracking */}
@@ -61,7 +86,7 @@ export default function ThankYou() {
             <a href="tel:08050291180" className="bg-primary hover:bg-blue-800 text-white font-poppins font-semibold px-8 py-4 rounded-lg transition">
               📞 Call Now
             </a>
-            <Link href="/" className="border-2 border-primary text-primary hover:bg-primary hover:text-white font-poppins font-semibold px-8 py-4 rounded-lg transition">
+            <Link href={backUrl} className="border-2 border-primary text-primary hover:bg-primary hover:text-white font-poppins font-semibold px-8 py-4 rounded-lg transition">
               Back to Home
             </Link>
           </div>
